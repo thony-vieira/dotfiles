@@ -1,0 +1,13 @@
+omm() {
+    docker compose exec -it rails sh -c "$*"
+}
+romm() {
+    docker compose exec -it rails sh -c "rails $*"
+}
+domm() {
+    docker exec -it oval-menu-management-rails bash
+}
+alias ownership='sudo chown -R $USER:$USER .' # run it if you see a permission denied error
+alias app-init='sh init.sh' # run to create the enviroment
+alias app-start='sh start.sh' #  run every time you want to start the app.
+                              # It will run migrations and gem or package instalations
